@@ -12,7 +12,7 @@ services:
       build: docker/mysql
       command: --default-authentication-plugin=mysql_native_password
       ports:
-        - 3306:3306
+        - 3307:3306
       environment:
         MYSQL_ROOT_PASSWORD: "TTAuR1Q6bxn"
         TZ: "Asia/Tokyo"
@@ -30,7 +30,7 @@ services:
       - ./application:/application
       - ./docker/nginx:/etc/nginx/conf.d
     ports:
-      - "80:80"
+      - "2502:80"
     networks:
       testing_net:
         ipv4_address: 172.30.1.3
